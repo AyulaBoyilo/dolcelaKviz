@@ -1,1 +1,1 @@
-Dolcela kviz
+7in1templateBasic

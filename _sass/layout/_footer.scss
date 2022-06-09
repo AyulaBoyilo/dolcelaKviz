@@ -1,0 +1,31 @@
+@use '../utilities' as *;
+@use '../base/typography' as *;
+
+footer {
+  font-family: $family-secondary;
+}
+
+.footer {
+  background-color: $first !important;
+  padding: 59px 0 57px !important;
+}
+
+.container-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.branding {
+  align-items: flex-end;
+  display: flex;
+  gap: 63px;
+  justify-content: center;
+  margin-top: 36px;
+}
+
+.footer__text {
+  color: white;
+  font-family: $family-secondary;
+  font-size: 12px;
+  letter-spacing: .88px;
+}

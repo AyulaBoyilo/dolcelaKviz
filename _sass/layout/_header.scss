@@ -1,0 +1,52 @@
+@use '../utilities/' as *;
+@use '../base/' as *;
+
+#kviz {
+  font-family: $family-primary;
+}
+
+.header__wrapper {
+  background-color: $first;
+}
+
+.videoWrapper {
+  height: 56.25vw;
+  left: -1px;
+  overflow: hidden;
+  position: relative;
+  top: -1px;
+  width: calc(100vw + 2px);
+
+  video {
+    clip-path: inset(1px 1px);
+    height: calc(100% + 1px);
+    object-fit: cover;
+    width: calc(100% + 1px);
+  }
+}
+
+.header__title__wrapper {
+  background-color: $first;
+  position: relative;
+  top: -1px;
+}
+
+.header__title {
+  @include for-phone {
+    font-size: 25px;
+    padding: 24px 30px;
+  }
+
+  @include for-tablet {
+    font-size: 30px;
+    padding: 60px 10%;
+  }
+
+  color: white;
+  font-size: 50px;
+  margin: 0 auto;
+  max-width: 1366px;
+  padding: 40px 0 90px;
+  text-align: center;
+  z-index: 1;
+}

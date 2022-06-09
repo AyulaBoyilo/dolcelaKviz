@@ -1,0 +1,151 @@
+@use '../utilities/' as *;
+@use '../base/' as *;
+
+.odgovorA__wrapper, .odgovorB__wrapper, .odgovorC__wrapper, .odgovorD__wrapper {
+  @include for-small-phone {
+    height: 120vh;
+  }
+
+  @include for-tablet {
+    height: 1366px;
+  }
+
+  @include for-phone-landscape {
+    height: 200vh;
+  }
+
+  @include for-tablet-landscape {
+    height: 1000px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.odgovorB__wrapper {
+  .rezultat__text__wrapper {
+    @include for-tablet {
+      bottom: 0;
+      left: 0;
+      right: initial;
+    }
+
+    left: initial;
+    right: 100px;
+  }
+
+  .rezultat__image {
+    @include for-phone {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+  }
+}
+
+.odgovorC__wrapper, .odgovorD__wrapper {
+  .rezultat__text__wrapper {
+    @include for-tablet {
+      bottom: 0;
+      left: 50%;
+      right: initial;
+      transform: translateX(-50%);
+    }
+  }
+
+  .rezultat__image {
+    @include for-phone {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+  }
+}
+
+.rezultat__text__wrapper {
+  @include for-phone {
+    background-color: $first;
+    padding: 40px;
+    position: initial;
+    width: 100vw;
+  }
+
+  @include for-tablet {
+    left: 0;
+    width: 62.5vw;
+  }
+
+  background-color: transparentize($color: $first, $amount: .2);
+  color: white;
+  left: 100px;
+  position: absolute;
+  padding: 55px 58px 58px 58px;
+  width: 480px;
+}
+
+.rezultat__title {
+  @include for-phone {
+    font-size: 30px;
+    padding-bottom: 15px;
+  }
+
+  font-size: 50px;
+  font-weight: 600;
+  padding-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.rezultat__text {
+  @include for-phone {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.rezultat__image__wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+.rezultat__image {
+  @include for-phone {
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  height: 100%;
+  line-height: 0;
+  overflow: hidden;
+  width: 100%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
+}
+
+.rezultat__link {
+  color: $link-pink;
+
+  &:hover, &:visited, &:active {
+    color: $link-pink;
+  }
+}

@@ -1,0 +1,17 @@
+@use '../utilities' as *;
+@use '../base' as *;
+
+.form__question {
+  @include for-phone {
+    margin: 50px 0 30px;
+    padding: 0 30px;
+  }
+
+  @include for-touch {
+    font-size: 20px;
+  }
+
+  color: $first;
+  font-size: 30px;
+  font-weight: 600;
+}

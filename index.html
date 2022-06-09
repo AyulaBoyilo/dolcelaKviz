@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-16" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dolcela - Idealan obrok nakon treninga</title>
+    <meta name="title" content="Dolcela - Idealan obrok nakon treninga" />
+    <meta name="description" content="Riješite test i saznajte koji je vaš idealan obrok nakon treninga." />
+    <link rel="stylesheet" href="css/main.css?v=5" />
+
+    <!-- Facebook -->
+    <meta property="og:url" content="https://native.story.hr/preview/dolcela-kviz/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Riješite test i saznajte koji je vaš idealan obrok nakon treninga" />
+    <meta
+      property="og:description"
+      content="Otkrijte svoj Hi osjećaj"
+    />
+    <meta
+      property="og:image"
+      content="https://native.story.hr/preview/dolcela-kviz/share.jpg"
+    />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="fb:app_id" content="684146431996498" />
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/favicon-192x192.png" sizes="192x192">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@300;400;700&family=Lexend+Deca:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-267402-38"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
+	
+			gtag('config', 'UA-267402-38');
+		</script>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="lib/jquery.serialize-object.min.js"></script>
+  </head>
+
+  <body>
+    <div id="kviz" v-cloak>
+
+      <!-- Front page -->
+      <div class="frontpage__wrapper" v-show="frontpageVisible">
+        <!-- Video header -->
+        <section class="header__wrapper">
+          <div class="videoWrapper">
+            <video
+              class="video"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="auto"
+            >
+              <source
+                src="./assets/video/Header_1920x1080.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </div>
+          <div class="header__title__wrapper">
+            <h1 class="header__title">Riješite naš test te otkrijte svoj HI osjećaj kada napokon pronađete savršeno zdrav i jako ukusan međuobrok </h1>
+          </div>
+        </section>
+
+        <!-- Form -->
+        <form id="formQuiz" class="form" @submit.prevent="finishQuiz">
+          <!-- Block 1 -->
+          <div class="block_1__wrapper">
+            <div class="pitanje_1__wrapper">
+              <!-- Pitanje 1 -->
+              <h3 class="form__question">Što u vama budi HI osjećaj?</h3>
+              <!-- Odgovor A -->
+              <label for="pitanje1_odgovor_A" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje1_odgovor_A"
+                  name="pitanje_1"
+                  value="A"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                a) vježbanje
+              </label>
+              <!-- Odgovor B -->
+              <label for="pitanje1_odgovor_B" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje1_odgovor_B"
+                  name="pitanje_1"
+                  value="B"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                b) desert bez dodatnog šećera
+              </label>
+              <!-- Odgovor C -->
+              <label for="pitanje1_odgovor_C" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje1_odgovor_C"
+                  name="pitanje_1"
+                  value="C"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                c) pauza od obaveza
+              </label>
+              <!-- Odgovor D -->
+              <label for="pitanje1_odgovor_D" class="button__label radio__wrapper last__answer">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje1_odgovor_D"
+                  name="pitanje_1"
+                  value="D"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                d) nagrada za male pobjede
+              </label>
+            </div>
+            
+            <!-- Image 1 -->
+            <picture class="image_1">
+              <source srcset="./assets/images/sl01_768x360.webp" media="(min-width: 768px) AND (max-width: 1024px)">
+              <source srcset="./assets/images/sl01_768x360.jpg" media="(min-width: 768px) AND (max-width: 1024px)">
+              <source  srcset="./assets/images/sl01_1920&1366.webp" media="(min-width: 1025px) AND (max-width: 1366px)">
+              <source  srcset="./assets/images/sl01_1920&1366.jpg" media="(min-width: 1025px) AND (max-width: 1366px)">
+              <source srcset="./assets/images/sl01_1920&1366.webp" media="(min-width: 1367px)">
+              <source srcset="./assets/images/sl01_1920&1366.jpg" media="(min-width: 1367px)">
+              <img src="./assets/images/sl01_768x360.jpg" alt="Žena sa Dolcela proteinskim napitkom">
+            </picture>
+            
+            <!-- Pitanje 2 -->
+            <div class="pitanje_2__wrapper">
+              <h3 class="form__question">Koji tip treninga preferirate?</h3>
+              <!-- Odgovor A -->
+              <label for="pitanje2_odgovor_A" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje2_odgovor_A"
+                  name="pitanje_2"
+                  value="A"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                a) trening u teretani
+              </label>
+              <!-- Odgovor B -->
+              <label for="pitanje2_odgovor_B" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje2_odgovor_B"
+                  name="pitanje_2"
+                  value="B"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                b) individualni s osobnim trenerom
+              </label>
+              <!-- Odgovor C -->
+              <label for="pitanje2_odgovor_C" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje2_odgovor_C"
+                  name="pitanje_2"
+                  value="C"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                c) trening na otvorenom
+              </label>
+              <!-- Odgovor D -->
+              <label for="pitanje2_odgovor_D" class="button__label radio__wrapper last__answer">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje2_odgovor_D"
+                  name="pitanje_2"
+                  value="D"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                d) „trening“ ispred televizora
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Block 2 -->
+          <div class="block_2__wrapper">
+            <!-- Image 2 -->
+            <picture class="image_2">
+              <source srcset="./assets/images/sl02_768x360.webp" media="(min-width: 768px) AND (max-width: 1024px)">
+              <source srcset="./assets/images/sl02_768x360.jpg" media="(min-width: 768px) AND (max-width: 1024px)">
+              <source  srcset="./assets/images/sl02_1920&1366.webp" media="(min-width: 1025px) AND (max-width: 1366px)">
+              <source  srcset="./assets/images/sl02_1920&1366.jpg" media="(min-width: 1025px) AND (max-width: 1366px)">
+              <source srcset="./assets/images/sl02_1920&1366.webp" media="(min-width: 1367px)">
+              <source srcset="./assets/images/sl02_1920&1366.jpg" media="(min-width: 1367px)">
+              <img src="./assets/images/sl02_768x360.jpg" alt="Utezi i vrećice Dolcela proteinskog praška">
+            </picture>
+      
+            <!-- Pitanje 3 -->
+            <div class="pitanje_3__wrapper">
+              <h3 class="form__question">U koje doba dana najradije vježbate?</h3>
+              <!-- Odgovor A -->
+              <label for="pitanje3_odgovor_A" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje3_odgovor_A"
+                  name="pitanje_3"
+                  value="A"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                a) ujutro prije posla
+              </label>
+              <!-- Odgovor B -->
+              <label for="pitanje3_odgovor_B" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje3_odgovor_B"
+                  name="pitanje_3"
+                  value="B"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                b)  poslijepodne, nakon posla
+              </label>
+              <!-- Odgovor C -->
+              <label for="pitanje3_odgovor_C" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje3_odgovor_C"
+                  name="pitanje_3"
+                  value="C"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                c)  navečer, nakon svih obaveza
+              </label>
+              <!-- Odgovor D -->
+              <label for="pitanje3_odgovor_D" class="button__label radio__wrapper last__answer">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje3_odgovor_D"
+                  name="pitanje_3"
+                  value="D"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                d) kada se uspijem napokon nagovoriti
+              </label>
+            </div>
+
+            <!-- Pitanje 4 -->
+            <div class="pitanje_4__wrapper">
+              <h3 class="form__question">Super ste odradili trening i osjećate se HI. Kojim ćete se desertom nagraditi?</h3>
+              <!-- Odgovor A -->
+              <label for="pitanje4_odgovor_A" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje4_odgovor_A"
+                  name="pitanje_4"
+                  value="A"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                a) bez imalo razmišljanja - slasnim browniejem 
+              </label>
+              <!-- Odgovor B -->
+              <label for="pitanje4_odgovor_B" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje4_odgovor_B"
+                  name="pitanje_4"
+                  value="B"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                b) nečim što mi paše uz kavu: tiramisu!
+              </label>
+              <!-- Odgovor C -->
+              <label for="pitanje4_odgovor_C" class="button__label radio__wrapper">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje4_odgovor_C"
+                  name="pitanje_4"
+                  value="C"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                c) cheesecake s malinama mi je sreća najveća
+              </label>
+              <!-- Odgovor D -->
+              <label for="pitanje4_odgovor_D" class="button__label radio__wrapper last__answer">
+                <span class="radio__input">
+                  <input
+                  type="radio"
+                  id="pitanje4_odgovor_D"
+                  name="pitanje_4"
+                  value="D"
+                  class="form__answer"
+                  />
+                  <span class="radio__control"></span>
+                </span>
+                d) keksima, ali zdravim
+              </label>
+            </div>
+
+          </div>
+
+          <!-- Block 3 -->
+          <div class="block_3__wrapper">
+            <!-- Image 3 -->
+            <div class="image_3__wrapper">
+              <picture class="image_3">
+                <source srcset="./assets/images/sl03_768x360.webp" media="(min-width: 768px) AND (max-width: 1024px)">
+                <source srcset="./assets/images/sl03_768x360.jpg" media="(min-width: 768px) AND (max-width: 1024px)">
+                <source  srcset="./assets/images/sl03_1920&14366.webp" media="(min-width: 1025px) AND (max-width: 1366px)">
+                <source  srcset="./assets/images/sl03_1920&14366.jpg" media="(min-width: 1025px) AND (max-width: 1366px)">
+                <source srcset="./assets/images/sl03_1920&14366.webp" media="(min-width: 1367px)">
+                <source srcset="./assets/images/sl03_1920&14366.jpg" media="(min-width: 1367px)">
+                <img src="./assets/images/sl03_768x360.jpg" alt="Utezi i vrećice Dolcela proteinskog praška">
+              </picture>
+            </div>
+  
+            <!-- Blue square -->
+            <div class="blue__square"></div>
+          </div>
+
+          <!-- Block 4 -->
+          <div class="block_4__wrapper">
+            <!-- Image 4 -->
+            <picture class="image_4">
+              <source srcset="./assets/images/sl04_768x360.webp" media="(min-width: 768px) AND (max-width: 1024px)">
+              <source srcset="./assets/images/sl04_768x360.jpg" media="(min-width: 768px) AND (max-width: 1024px)">
+              <source  srcset="./assets/images/sl04_1920&1366.webp" media="(min-width: 1025px) AND (max-width: 1366px)">
+              <source  srcset="./assets/images/sl04_1920&1366.jpg" media="(min-width: 1025px) AND (max-width: 1366px)">
+              <source srcset="./assets/images/sl04_1920&1366.webp" media="(min-width: 1367px)">
+              <source srcset="./assets/images/sl04_1920&1366.jpg" media="(min-width: 1367px)">
+              <img src="./assets/images/sl04_768x360.jpg" alt="Utezi i vrećice Dolcela proteinskog praška">
+            </picture>
+  
+            <div class="block_4__1st">
+              <!-- Pitanje 5 -->
+              <div class="pitanje_5__wrapper">
+                <h3 class="form__question">Što vam je trenutačni fokus i cilj?</h3>
+                <!-- Odgovor A -->
+                <label for="pitanje5_odgovor_A" class="button__label radio__wrapper">
+                  <span class="radio__input">
+                    <input
+                    type="radio"
+                    id="pitanje5_odgovor_A"
+                    name="pitanje_5"
+                    value="A"
+                    class="form__answer"
+                    />
+                    <span class="radio__control"></span>
+                  </span>
+                  a) da sve stignem obaviti na vrijeme
+                </label>
+                <!-- Odgovor B -->
+                <label for="pitanje5_odgovor_B" class="button__label radio__wrapper">
+                  <span class="radio__input">
+                    <input
+                    type="radio"
+                    id="pitanje5_odgovor_B"
+                    name="pitanje_5"
+                    value="B"
+                    class="form__answer"
+                    />
+                    <span class="radio__control"></span>
+                  </span>
+                  b) da postignem željenu formu
+                </label>
+                <!-- Odgovor C -->
+                <label for="pitanje5_odgovor_C" class="button__label radio__wrapper">
+                  <span class="radio__input">
+                    <input
+                    type="radio"
+                    id="pitanje5_odgovor_C"
+                    name="pitanje_5"
+                    value="C"
+                    class="form__answer"
+                    />
+                    <span class="radio__control"></span>
+                  </span>
+                  c) da imam energije za sve obaveze
+                </label>
+                <!-- Odgovor D -->
+                <label for="pitanje5_odgovor_D" class="button__label radio__wrapper last__answer">
+                  <span class="radio__input">
+                    <input
+                    type="radio"
+                    id="pitanje5_odgovor_D"
+                    name="pitanje_5"
+                    value="D"
+                    class="form__answer"
+                    />
+                    <span class="radio__control"></span>
+                  </span>
+                  d) da se zdravo hranim
+                </label>
+              </div>
+  
+              <!-- Pitanje 6 -->
+              <div class="pitanje_6__wrapper">
+                <h3 class="form__question">Što vam je najvažnije kod međuobroka?</h3>
+                <!-- Odgovor A -->
+                <label for="pitanje6_odgovor_A" class="button__label radio__wrapper">
+                  <span class="radio__input">
+                    <input
+                    type="radio"
+                    id="pitanje6_odgovor_A"
+                    name="pitanje_6"
+                    value="A"
+                    class="form__answer"
+                    />
+                    <span class="radio__control"></span>
+                  </span>
+                  a)  da je gotov u minuti 
+                </label>
+                <!-- Odgovor B -->
+                <label for="pitanje6_odgovor_B" class="button__label radio__wrapper">
+                  <span class="radio__input">
+                    <input
+                    type="radio"
+                    id="pitanje6_odgovor_B"
+                    name="pitanje_6"
+                    value="B"
+                    class="form__answer"
+                    />
+                    <span class="radio__control"></span>
+                  </span>
+                  b)  da je bogat proteinima 
+                </label>
+                <!-- Odgovor C -->
+                <label for="pitanje6_odgovor_C" class="button__label radio__wrapper">
+                  <span class="radio__input">
+                    <input
+                    type="radio"
+                    id="pitanje6_odgovor_C"
+                    name="pitanje_6"
+                    value="C"
+                    class="form__answer"
+                    />
+                    <span class="radio__control"></span>
+                  </span>
+                  c)  da je zdrav, ali odličnog okusa
+                </label>
+                <!-- Odgovor D -->
+                <label for="pitanje6_odgovor_D" class="button__label radio__wrapper last__answer">
+                  <span class="radio__input">
+                    <input
+                    type="radio"
+                    id="pitanje6_odgovor_D"
+                    name="pitanje_6"
+                    value="D"
+                    class="form__answer"
+                    />
+                    <span class="radio__control"></span>
+                  </span>
+                  d)  da je bez dodanog šećera
+                </label>
+              </div>
+  
+              <button class="button-custom" type="submit">Otkrij svoj idealan obrok</button>
+
+            </div>
+            
+            
+          </div>
+          
+        </form>
+
+        <h1 v-show="warningDisplay" class="error__answer form__question">Molimo unesite barem jedan odgovor.</h1>
+      </div>
+  
+      <!-- Odgovor A page -->
+      <div v-show="mostAVisible" class="odgovorA__wrapper">
+        <div class="rezultat__text__wrapper">
+          <h1 class="rezultat__title">Najviše a)</h1>
+          <p class="rezultat__text">Vrlo ste strastvena i nestrpljiva osoba: nikada nemate vremena, stalno vam se žuri. Čim ujutro otvorite oči, krećete u akciju. Upravo vas to i čini sretnima i ispunjenima. Osim toga, HI osjećaj vam daje i čokoladna pauza koju si možete priuštiti u bilo koje doba dana – u obliku <a class="rezultat__link" href="https://protein.dolcela.hr/" target="_blank">Dolcela Hi protein Brownie shakea</a> punog čokoladnog okusa i bez dodanog šećera. I, da, znamo da vam se žuri: shake je gotov u roku od minute.</p>
+        </div>
+        <div class="rezultat__image__wrapper">
+          <picture class="rezultat__image">
+            <source srcset="./assets/images/A_tablet.webp" media="(min-width: 768px) AND (max-width: 1024px)">
+            <source srcset="./assets/images/A_tablet.jpg" media="(min-width: 768px) AND (max-width: 1024px)">
+            <source  srcset="./assets/images/A_desktop.webp" media="(min-width: 1025px) AND (max-width: 1366px)">
+            <source  srcset="./assets/images/A_desktop.jpg" media="(min-width: 1025px) AND (max-width: 1366px)">
+            <source srcset="./assets/images/A_fullhd.webp" media="(min-width: 1367px)">
+            <source srcset="./assets/images/A_fullhd.jpg" media="(min-width: 1367px)">
+            <img src="./assets/images/A_mobile.jpg" alt="Dolcela Hi protein Brownie shake">
+          </picture>
+        </div>
+      </div>
+      <!-- Odgovor B page -->
+      <div v-show="mostBVisible" class="odgovorB__wrapper">
+        <div class="rezultat__text__wrapper">
+          <h1 class="rezultat__title">Najviše b)</h1>
+          <p class="rezultat__text">Volite sami sebi ugoditi jer ste si na prvome mjestu: poslovni dnevni raspored volite “razbiti” vježbanjem, druženjem s prijateljima, intenzivnim radom na svojoj formi i zdravlju. Posebni HI osjećaj vam daje onaj trenutak čiste sreće kada otkrijete nešto stvarno super. Poput, <a class="rezultat__link" href="https://protein.dolcela.hr/" target="_blank">HI protein Tiramisu shakea</a> desertnog napitka bogatog proteinima, bez glutena i bez dodanog šećera.</p>
+        </div>
+        <div class="rezultat__image__wrapper">
+          <picture class="rezultat__image">
+            <source srcset="./assets/images/B_tablet.webp" media="(min-width: 768px) AND (max-width: 1024px)">
+            <source srcset="./assets/images/B_tablet.jpg" media="(min-width: 768px) AND (max-width: 1024px)">
+            <source  srcset="./assets/images/B_desktop.webp" media="(min-width: 1025px) AND (max-width: 1366px)">
+            <source  srcset="./assets/images/B_desktop.jpg" media="(min-width: 1025px) AND (max-width: 1366px)">
+            <source srcset="./assets/images/B_fullhd.webp" media="(min-width: 1367px)">
+            <source srcset="./assets/images/B_fullhd.jpg" media="(min-width: 1367px)">
+            <img src="./assets/images/B_mobile.jpg" alt="Dolcela HI protein Tiramisu shake">
+          </picture>
+        </div>
+      </div>
+      <!-- Odgovor C page -->
+      <div v-show="mostCVisible" class="odgovorC__wrapper">
+        <div class="rezultat__text__wrapper">
+          <h1 class="rezultat__title">Najviše C)</h1>
+          <p class="rezultat__text">Ukratko, vama HI osjećaj daje sloboda, nesputanost, život na otvorenom, svaka pauza koju uspijete „ukrasti“ tijekom dana. Osoba ste koja pršti energijom, ali uvijek je želite imate više i više. Stoga vas vaš međuobrok čeka u <a class="rezultat__link" href="https://protein.dolcela.hr/" target="_blank">Dolcela HI protein Cheesecake malina shakeu</a>, u obliku slasnog desertnog napitka obogaćenog Whey proteinima i bez dodanog šećera. Neodoljive boje i neodoljivog okusa, Cheesecake malina shake daje energiju i produljuje osjećaj sitosti.</p>
+        </div>
+        <div class="rezultat__image__wrapper">
+          <picture class="rezultat__image">
+            <source srcset="./assets/images/C_tablet.webp" media="(min-width: 768px) AND (max-width: 1024px)">
+            <source srcset="./assets/images/C_tablet.jpg" media="(min-width: 768px) AND (max-width: 1024px)">
+            <source  srcset="./assets/images/C_desktop.webp" media="(min-width: 1025px) AND (max-width: 1366px)">
+            <source  srcset="./assets/images/C_desktop.jpg" media="(min-width: 1025px) AND (max-width: 1366px)">
+            <source srcset="./assets/images/C_fullhd.webp" media="(min-width: 1367px)">
+            <source srcset="./assets/images/C_fullhd.jpg" media="(min-width: 1367px)">
+            <img src="./assets/images/C_mobile.jpg" alt="Dolcela Hi protein Brownie shake">
+          </picture>
+        </div>
+      </div>
+      <!-- Odgovor D page -->
+      <div v-show="mostDVisible" class="odgovorD__wrapper">
+        <div class="rezultat__text__wrapper">
+          <h1 class="rezultat__title">Najviše D)</h1>
+          <p class="rezultat__text">Jednostavna ste osoba koja životu pristupa bez mnogo kompliciranja. Lako se prilagođavate svakodnevnim situacijama, a već odavno znate kako je za zdravlje važno stisnuti pauzu i, zašto ne, počastiti se desertnim međuobrokom, bilo kad i bilo gdje. <a class="rezultat__link" href="https://protein.dolcela.hr/" target="_blank">Dolcela HI protein Cookie shake</a> gotov je za samo minutu, jako je ukusan i sadrži samo prirodne šećere. Zahvaljujući whey proteinima drži vas sitim i daje potrebnu energiju, a sve to uz sjajan okus i bez glutena.</p>
+        </div>
+        <div class="rezultat__image__wrapper">
+          <picture class="rezultat__image">
+            <source srcset="./assets/images/D_tablet.webp" media="(min-width: 768px) AND (max-width: 1024px)">
+            <source srcset="./assets/images/D_tablet.jpg" media="(min-width: 768px) AND (max-width: 1024px)">
+            <source  srcset="./assets/images/D_desktop.webp" media="(min-width: 1025px) AND (max-width: 1366px)">
+            <source  srcset="./assets/images/D_desktop.jpg" media="(min-width: 1025px) AND (max-width: 1366px)">
+            <source srcset="./assets/images/D_fullhd.webp" media="(min-width: 1367px)">
+            <source srcset="./assets/images/D_fullhd.jpg" media="(min-width: 1367px)">
+            <img src="./assets/images/D_mobile.jpg" alt="Dolcela Hi protein Brownie shake">
+          </picture>
+        </div>
+      </div>
+      
+    </div>
+
+    <!--  FOOTER -->
+    <footer class="footer has-text-centered">
+      <div class="container-footer">
+        <h6 class="footer__text">Sadržaj nastao u suradnji</h6>
+        <div class="branding">
+          <a href="http://www.adriamedia.hr" target="_blank">
+            <img src="./assets/images/AMZ_logo.png" alt="AMZ logo"/>
+          </a>
+          <a href="https://protein.dolcela.hr/" target="_blank">
+            <img src="./assets/images/dolcela_logo.png" alt="Dolcela logo" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- GSAP-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+
+    <!-- Main -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script type="text/javascript" src="lib/main.js?v=5"></script>
+
+  </body>
+</html>
