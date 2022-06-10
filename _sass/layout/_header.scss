@@ -25,6 +25,14 @@
   }
 }
 
+.header__lottie {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: auto;
+  top: 0;
+}
+
 .header__title__wrapper {
   background-color: $first;
   position: relative;

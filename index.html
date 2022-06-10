@@ -7,7 +7,7 @@
     <title>Dolcela - Idealan obrok nakon treninga</title>
     <meta name="title" content="Dolcela - Idealan obrok nakon treninga" />
     <meta name="description" content="Riješite test i saznajte koji je vaš idealan obrok nakon treninga." />
-    <link rel="stylesheet" href="css/main.css?v=5" />
+    <link rel="stylesheet" href="css/main.css?v=6" />
 
     <!-- Facebook -->
     <meta property="og:url" content="https://native.story.hr/preview/dolcela-kviz/" />
@@ -46,6 +46,9 @@
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="lib/jquery.serialize-object.min.js"></script>
+
+    <!-- Lottie player -->
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   </head>
 
   <body>
@@ -65,10 +68,11 @@
               preload="auto"
             >
               <source
-                src="./assets/video/Header_1920x1080.mp4"
+                src="./assets/video/Header_1920x1080_nowave.mp4"
                 type="video/mp4"
               />
             </video>
+            <lottie-player class="header__lottie" src="./assets/video/wave_1920x1080.json" background="transparent"  speed="1"  style="width: 100%; height: auto;" loop  autoplay></lottie-player>
           </div>
           <div class="header__title__wrapper">
             <h1 class="header__title">Riješite naš test te otkrijte svoj HI osjećaj kada napokon pronađete savršeno zdrav i jako ukusan međuobrok </h1>
