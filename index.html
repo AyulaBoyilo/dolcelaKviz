@@ -76,7 +76,7 @@
         </section>
 
         <!-- Form -->
-        <form id="formQuiz" class="form" @submit.prevent="finishQuiz">
+        <form id="formQuiz" ref="formQuiz" class="form" @submit.prevent="finishQuiz">
           <!-- Block 1 -->
           <div class="block_1__wrapper">
             <div class="pitanje_1__wrapper">
@@ -613,8 +613,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
 
     <!-- Main -->
-    <script src="https://unpkg.com/vue@3"></script>
-    <script type="text/javascript" src="lib/main.js?v=5"></script>
+    <script>
+      function addScript(src, async = false, id) {
+        var s = document.createElement('script');
+        s.setAttribute('src', src);
+        s.setAttribute('async', async);
+        s.setAttribute('id', id);
+        document.body.appendChild(s);
+      }
+      var vueScript = window.location.hostname === 'native.story.hr' ? 'https://unpkg.com/vue@3.2.37/dist/vue.global.prod.js' : 'https://unpkg.com/vue@3';
+      var mainScript = 'lib/main.js?v=5';
+      addScript(vueScript, true, 'vuescript');
+
+      var vuescript = document.querySelector('#vuescript');
+      vuescript.addEventListener('load', function() {
+        addScript(mainScript, false, 'mainscript');
+      });
+    </script>
+    <!-- <script src="https://unpkg.com/vue@3"></script> -->
+    <!-- <script src="https://unpkg.com/vue@3.2.37/dist/vue.global.prod.js"></script> -->
+    <!-- <script type="text/javascript" src="lib/main.js?v=5"></script> -->
 
   </body>
 </html>

@@ -14,9 +14,14 @@ let app = Vue.createApp({
       totalD: 0
     }
   },
+  mounted() {
+    window.scrollTo(0, 0);
+    // console.log(this.$refs.formQuiz);
+  },
   methods: {
     finishQuiz() {
       const odgovoriObjekt = $('form#formQuiz').serializeObject();
+      
       this.odgovori = Object.values(odgovoriObjekt);
       
       this.totalA = this.odgovori.filter(x => x === 'A').length;
@@ -45,9 +50,6 @@ let app = Vue.createApp({
         this.warningDisplay = true;
       }
     }
-  },
-  mounted() {
-    window.scrollTo(0, 0);
   }
 })
 
