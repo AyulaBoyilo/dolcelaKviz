@@ -614,20 +614,25 @@
 
     <!-- Main -->
     <script>
-      function addScript(src, async = false, id) {
+      function addScript(src, id, async = false) {
         var s = document.createElement('script');
         s.setAttribute('src', src);
         s.setAttribute('async', async);
         s.setAttribute('id', id);
         document.body.appendChild(s);
       }
-      var vueScript = window.location.hostname === 'native.story.hr' ? 'https://unpkg.com/vue@3.2.37/dist/vue.global.prod.js' : 'https://unpkg.com/vue@3';
+      var scriptObj = {
+        urlTest: 'native.story.hr',
+        production: 'https://unpkg.com/vue@3.2.37/dist/vue.global.prod.js',
+        development: 'https://unpkg.com/vue@3'
+      }
+      var vueScript = window.location.hostname === scriptObj.urlTest ? scriptObj.production : scriptObj.development;
       var mainScript = 'lib/main.js?v=5';
-      addScript(vueScript, true, 'vuescript');
+      addScript(vueScript, 'vuescript', true);
 
       var vuescript = document.querySelector('#vuescript');
       vuescript.addEventListener('load', function() {
-        addScript(mainScript, false, 'mainscript');
+        addScript(mainScript, 'mainscript');
       });
     </script>
     <!-- <script src="https://unpkg.com/vue@3"></script> -->
